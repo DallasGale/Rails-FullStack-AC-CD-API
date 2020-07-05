@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  version: MyString
+  release_date: MyString
+  tracks: 
+  is_studio_recording: false
+  is_live_recording: false
+  is_compilation: false
+
+two:
+  title: MyString
+  version: MyString
+  release_date: MyString
+  tracks: 
+  is_studio_recording: false
+  is_live_recording: false
+  is_compilation: false
