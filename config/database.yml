@@ -78,6 +78,8 @@ test:
 #
 production:
   <<: *default
+  host: ec2-34-225-162-157.compute-1.amazonaws.com
   database: d2aufv17c7978u
+  port: 5432
   username: <%= ENV['HEROKU_DB_USER'] %>
   password: <%= ENV['HEROKU_DB_PASS'] %>
