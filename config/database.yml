@@ -78,6 +78,6 @@ test:
 #
 production:
   <<: *default
-  database: fullstack_acdc_api_development
-  username: fullstack_acdc_api
-  password: <%= ENV['FULLSTACK_ACDC_API_DATABASE_PASSWORD'] %>
+  database: d2aufv17c7978u
+  username: <%= ENV['HEROKU_DB_USER'] %>
+  password: <%= ENV['HEROKU_DB_PASS'] %>

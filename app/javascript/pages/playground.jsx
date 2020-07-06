@@ -12,9 +12,11 @@ const PlaygroundPage = ({ history }) => {
   useEffect(() => {
     fetch(albumsApiEndpoint)
       .then((res) => {
+        console.log("fetch", res);
         if (res.ok) {
           return res.json();
         } else {
+          console.log("fetch", res);
           throw new Error("Network response was not ok!");
         }
       })
@@ -28,7 +30,8 @@ const PlaygroundPage = ({ history }) => {
 
       <h2>All Albums</h2>
       {albums.map((album) => {
-        return renderAlbum(album, album.id);
+        console.log("album", album);
+        return <li key={album.id}>{album.title}</li>;
       })}
     </div>
   );
