@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-
 Album.create([
   {
     title: "High Voltage",
@@ -65,3 +64,6 @@ Album.create([
     back_cover_image: "https://via.placeholder.com/650x650",
   }
 ])
+
+
+

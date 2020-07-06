@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
 function renderAlbum(album) {
-  const { title } = album;
-  return <li>{title}</li>;
+  const { title, id } = album;
+  return <li key={id}>{title}</li>;
 }
 const albumsApiEndpoint = "/api/v1/albums";
 
@@ -28,7 +28,7 @@ const PlaygroundPage = ({ history }) => {
 
       <h2>All Albums</h2>
       {albums.map((album) => {
-        return renderAlbum(album);
+        return renderAlbum(album, album.id);
       })}
     </div>
   );

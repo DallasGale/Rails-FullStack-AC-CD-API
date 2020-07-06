@@ -78,6 +78,6 @@ test:
 #
 production:
   <<: *default
-  database: fullstack_acdc_api_production
+  database: fullstack_acdc_api_development
   username: fullstack_acdc_api
   password: <%= ENV['FULLSTACK_ACDC_API_DATABASE_PASSWORD'] %>

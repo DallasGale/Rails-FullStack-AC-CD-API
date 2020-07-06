@@ -1,6 +1,30 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
+      get 'songs/index'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'songs/create'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'songs/show'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'songs/destroy'
+    end
+  end
+
+  namespace :api do
+    namespace :v1 do
       get 'albums', to: 'albums#index'
       post 'albums/create'
       get '/show/:id', to: 'albums#show'
