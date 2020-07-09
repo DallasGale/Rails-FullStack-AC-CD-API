@@ -66,4 +66,37 @@ Album.create([
 ])
 
 
-
+Song.create([
+  {
+    title: "Baby, Please Don't Go",
+    length: "00:04:50:000",
+  },
+  {
+    title: "She's Got Balls",
+    length: "00:04:52:000",
+  },
+  {
+    title: "Little Lover",
+    length: "00:05:40:000",
+  },
+  {
+    title: "Stick Around",
+    length: "00:04:39:000",
+  },
+  {
+    title: "Soul Stripper",
+    length: "00:06:25:000",
+  },
+  {
+    title: "You Ain't Got a Hold on Me",
+    length: "00:03:31:000",
+  },
+  {
+    title: "Love Song",
+    length: "00:05:14:000",
+  },
+  {
+    title: "Show Business",
+    length: "00:04:46:000",
+  }
+])

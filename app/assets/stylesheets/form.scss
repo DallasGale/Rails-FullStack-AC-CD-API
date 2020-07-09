@@ -1,0 +1,22 @@
+.form {
+  background: rgb(70, 70, 70);
+  color: white;
+  display: flex;
+
+  position: fixed;
+  top: 42px;
+  width: 100%;
+  padding: 20px;
+  left: 0;
+
+  div {
+    width: 25%;
+    min-width: 25%;
+  }
+
+  input {
+    width: 90%;
+    height: 50px;
+    padding-left: 10px;
+  }
+}

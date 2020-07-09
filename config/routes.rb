@@ -1,34 +1,20 @@
 Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
-      get 'songs/index'
-    end
-  end
+      get 'songs', to: 'songs#index'
+      post 'songs/create'
+      # get '/show/:id', to: 'songs#show'
+      # delete '/destroy/:id', to: 'songs#destroy'
 
-  namespace :api do
-    namespace :v1 do
-      get 'songs/create'
-    end
-  end
-
-  namespace :api do
-    namespace :v1 do
-      get 'songs/show'
-    end
-  end
-
-  namespace :api do
-    namespace :v1 do
-      get 'songs/destroy'
-    end
-  end
-
-  namespace :api do
-    namespace :v1 do
+      # resources :albums
+   
       get 'albums', to: 'albums#index'
       post 'albums/create'
-      get '/show/:id', to: 'albums#show'
-      delete '/destroy/:id', to: 'albums#destroy'
+      get 'albums/show/:id', to: 'albums#show'
+      delete 'albums/destroy/:id', to: 'albums#destroy'
+
+      put 'albums/:id', to: 'albums#update'
+      patch 'albums/:id', to: 'albums#update'
     end
   end
 

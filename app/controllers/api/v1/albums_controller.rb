@@ -1,7 +1,14 @@
 class Api::V1::AlbumsController < ApplicationController
+
+  protect_from_forgery with: :null_session, if: Proc.new {|c| c.request.format.json? }
+
   def index
     album = Album.all.order(release_date: :desc)
     render json: { status: 'SUCCESS', message: 'Loaded albums', data: album}, status: :ok
+  end
+
+  def songs 
+    album = Album.joins(:songs).all.order(release_date: :desc)
   end
 
   def create
@@ -21,6 +28,22 @@ class Api::V1::AlbumsController < ApplicationController
     end
   end
 
+  # def edit 
+  #   album = Album.find(params[:id])
+  # end
+
+  # def update
+  #   album = Album.find(params[:id])
+  
+  #   if album.update(album_params)
+  #     redirect_to album
+  #   else
+  #     render 'edit'
+  #   end
+  # end
+  
+
+
   def destroy
     album&.destroy
     render json: { message: 'Album deleted!'}
@@ -32,6 +55,6 @@ class Api::V1::AlbumsController < ApplicationController
   end
 
   def album 
-    @album ||= Album.finc(params[:id])
+    @album ||= Album.find(params[:id])
   end
 end

@@ -1,0 +1,34 @@
+.card {
+  align-items: flex-start;
+  display: flex;
+  padding: 10px;
+  border-radius: 4px;
+  color: black;
+  // background: rgb(236, 236, 236);
+  margin-bottom: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card-cell {
+  // background: white;
+  border: 1px solid black;
+  height: 100%;
+  // border-radius: 5px;
+  flex: 1;
+  padding: 2px;
+  font-size: 8px;
+  min-width: 10%;
+  width: 10%;
+}
+span {
+  opacity: 0.5;
+}
+
+// h2.card-id {
+//   background: none;
+//   position: absolute;
+//   left: 20px;
+//   width: 50px;
+// }
