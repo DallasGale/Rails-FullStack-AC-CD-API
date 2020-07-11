@@ -1,6 +1,39 @@
 table {
-  margin-top: 200px;
+  font-size: 12px;
   img {
     max-width: 100px;
+  }
+
+  td,
+  th {
+    padding: 8px;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.048);
+  }
+
+  tbody tr {
+    transition: all 0.15s;
+    &:hover {
+      background-color: rgb(233, 225, 120);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+  }
+
+  tbody td:nth-child(odd) {
+    background-color: rgba(0, 0, 0, 0.048);
+  }
+
+  thead tr {
+    background-color: rgb(118, 161, 190);
+    color: white;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  thead t {
+    text-align: left;
   }
 }

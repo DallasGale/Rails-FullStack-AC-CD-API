@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Card from "../../components/ui/card";
+// import AlbumTableHeader from "../../components/tables/album_header";
+// import AlbumTableBody from "../../components/tables/album_body";
 
-const AlbumsCreate = ({ data }) => {
+const AlbumsCreate = ({ data }, props) => {
   // console.log("data", data);
   const { albums, songs } = data;
 
@@ -97,31 +98,14 @@ const AlbumsCreate = ({ data }) => {
         </div>
       </form>
 
-      <table
+      {/* <table
         width="100%"
         border="1"
         cellPadding="7"
         cellSpacing="0"
         className="table"
       >
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>TITLE</th>
-            <th>LENGTH</th>
-            <th>VERSION</th>
-            <th>RELEASE DATE</th>
-            <th>IS STUDIO RECORDING?</th>
-            <th>IS LIVE RECORDING?</th>
-            <th>IS COMPILATION?</th>
-            <th>SONGS</th>
-            <th>TRACK COUNT</th>
-            <th>FRONT COVER</th>
-            <th>BACK COVER</th>
-            <th>EDIT</th>
-            <th>DELETE</th>
-          </tr>
-        </thead>
+        <AlbumTableHeader />
 
         <tbody>
           {albums.map((album) => {
@@ -142,45 +126,11 @@ const AlbumsCreate = ({ data }) => {
               handleEdit,
               handleDelete,
             } = album;
-            return (
-              <tr>
-                <td>{id}</td>
-                <td>{title}</td>
-                <td>{length}</td>
-                <td>{version}</td>
-                <td>{release_date}</td>
-                <td>{is_studio_recording}</td>
-                <td>{is_live_recording}</td>
-                <td>{is_compilation}</td>
-                <td>{songs}</td>
-                <td>{tracks}</td>
-                <td>
-                  <img src={`${front_cover_image}`} />
-                </td>
-                <td>
-                  <img src={`${back_cover_image}`} />
-                </td>
-                <td>
-                  <button onClick={() => handleEdit(id)}>Edit</button>
-                </td>
-                <td>
-                  <button onClick={() => handleDeletion(id)}>delete</button>
-                </td>
-              </tr>
-            );
+            return <AlbumTableBody {...props} />;
           })}
-          {/*
-            <h2>All Songs</h2>
-            {songs.map((song) => {
-              // console.log("song", song);
-              return (
-                <li key={song.id}>
-                  {song.title} - Album Id = {song.album_id}
-                </li>
-              );
-            })} */}
+         
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
 };

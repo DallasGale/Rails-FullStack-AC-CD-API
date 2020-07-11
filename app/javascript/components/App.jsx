@@ -11,6 +11,7 @@ import Header from "../components/ui/header";
 import Home from "./home";
 import Nav from "../components/ui/nav";
 // Pages
+import AlbumsPage from "../pages/albums";
 import DocsPage from "../pages/docs";
 import PlaygroundPage from "../pages/playground";
 import CreateAlbum from "../pages/albums/create";
@@ -24,17 +25,17 @@ const App = (props) => {
   const [songs, setSongs] = useState([]);
 
   useEffect(() => {
-    fetch(albumsEndpoint)
-      .then((res) => {
-        // console.log("fetch", res);
-        if (res.ok) {
-          return res.json();
-        } else {
-          // console.log("fetch", res);
-          throw new Error("Network response was not ok!");
-        }
-      })
-      .then((res) => setAlbums(res.data));
+    // fetch(albumsEndpoint)
+    //   .then((res) => {
+    //     // console.log("fetch", res);
+    //     if (res.ok) {
+    //       return res.json();
+    //     } else {
+    //       // console.log("fetch", res);
+    //       throw new Error("Network response was not ok!");
+    //     }
+    //   })
+    //   .then((res) => setAlbums(res.data));
 
     fetch(songsEndpoint)
       .then((res) => {
@@ -59,6 +60,12 @@ const App = (props) => {
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/docs" exact component={DocsPage} />
+          <Route
+            path="/albums"
+            exact
+            render={() => <AlbumsPage data={{ albums }} />}
+          />
+
           <Route
             path="/api/v1/albums/create"
             exact

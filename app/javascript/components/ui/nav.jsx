@@ -3,15 +3,29 @@ import { Link } from "react-router-dom";
 
 export default () => {
   return (
-    <nav class="nav">
+    <nav className="nav">
+      <Link to="/">AC/DC API</Link>
       <Link to="/docs" role="button">
-        Read the documentation
+        Documentation
       </Link>
-      <Link to="/api/v1/playground" role="button">
+      {/* <Link to="/admin" role="button">
+        Admin
+        <Link to="/albums" role="button">
+          Add an Album
+        </Link>
+        <Link to="/albums" role="button">
+          Lit all Albums
+          <Link to="/albums" role="button">
+            Edit an Album
+          </Link>
+        </Link>
+      </Link> */}
+      {/* <Link to="/api/v1/playground" role="button">
         Playground
-      </Link>
-      <Link to="/api/v1/albums/create" role="button">
-        Create an Album
+      </Link> */}
+
+      <Link to="/albums" role="button">
+        Show Albums
       </Link>
     </nav>
   );
